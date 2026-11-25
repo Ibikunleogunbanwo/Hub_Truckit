@@ -18,9 +18,17 @@ It holds three things:
 | `contract/openapi.yaml` | The API contract | Backend, via a `contract-change` PR |
 | `decisions/` | Architecture decision records (ADRs) | Whoever makes the decision |
 | `changelog/` | One entry per merged piece of work, newest first | Every agent, every PR |
+| `onboarding/` | Starter prompt and access checklist for each agent | Human, rarely |
 | `.github/` | Issue and PR templates | Human, rarely |
 
+## Links
+
+Repos, Figma, labels and services are listed in [`context/resources.md`](context/resources.md). Figma frames with node IDs are in [`context/figma-frames.md`](context/figma-frames.md).
+
 ## Quick start for an agent
+
+New agent? Use its guide in [`onboarding/`](onboarding/).
+
 
 1. Read `AGENTS.md`.
 2. Read `context/status.md` to see what is done and in progress.
