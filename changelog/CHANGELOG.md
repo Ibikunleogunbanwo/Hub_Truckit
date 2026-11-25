@@ -10,6 +10,14 @@ Format:
 - Links: PR, issue
 ```
 
+## 2026-11-25 · Frontend_Truckit / Hub_Truckit · Frontend foundation and backend skills handoff
+- Added the Next.js App Router foundation with Tailwind, local fonts and exact Figma SVG assets, semantic tokens, shadcn-compatible Radix primitives, responsive shells and an interactive component showcase. Documented accessible contrast adjustments.
+- Added an exact revisioned Hub contract snapshot, generated types, openapi-fetch client, loopback Prism mock and CI checks. Only `/health` is defined; no backend app or Hub contract edits.
+- Local validation: lint, typecheck, production build, 6 unit/interaction tests and 6 desktop/mobile Playwright checks including axe passed. Runtime dependency audit is clean; development-only Prism upstream advisories are documented.
+- Shared seven installed backend-relevant skill folders with hashes and installation/onboarding guidance, preserving ade's ownership of backend application code.
+- Updated frontend architecture, environment variables, resources, status and decision 0005.
+- Links: [Frontend PR #1](https://github.com/Ibikunleogunbanwo/Frontend_Truckit/pull/1), [Hub issue #5](https://github.com/Ibikunleogunbanwo/Hub_Truckit/issues/5).
+
 ## 2026-11-25 · Hub_Truckit · Hub CI, sample data, environments, project board
 - Added `hub-checks` GitHub Actions: Spectral lint of the contract, JSON check of examples, required changelog entry, and a contract version bump check.
 - Added shared sample data in `contract/examples/` (users, service centers with trucks and movers, a move request, a quote, a move, transactions) taken from the Figma.
