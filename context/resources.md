@@ -49,6 +49,7 @@ Design tokens read from Figma:
 | `primaryColor` | `#14B8A6` |
 | `regularText` | Montserrat Medium 14px, line height 24px |
 | `boldRegularText` | Montserrat Bold 14px, line height 24px |
+| Headings and wordmark (public pages) | Inknut Antiqua (per frontend decision 0005) |
 
 ## Services (planned)
 

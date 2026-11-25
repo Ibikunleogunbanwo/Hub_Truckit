@@ -1,40 +1,31 @@
-# Backend skills handoff
+# Skills for agents
 
-Ade requested sharing relevant skills installed in the frontend agent's environment. Complete snapshots, including referenced files and bundled license notices, are in [`shared-skills/backend/`](../shared-skills/backend/). `manifest.json` records SHA-256 hashes and local provenance. These are existing skills, not new Truckit-specific skills; upstream origins have not been verified.
+Skills are reusable instruction packs an agent loads for a task. This page lists the ones that are useful for Truckit. The hub does **not** store skill files: they are third-party content with their own origins and licences, and copies here would bury the context docs and drift out of date. Install skills from their source into your own agent's skills directory.
 
-## Install
+## Truckit-specific
 
-For a Codex backend agent on the **same machine and user account**, these skills already live in `~/.agents/skills/`. Check the backend chat's available-skills list before installing duplicates. Installing for a different agent harness can use its own skill directory.
+| Skill | For | Where |
+|---|---|---|
+| `truckit-hub-sync` | Any agent: read the hub at the start of work, update changelog and status and open the hub PR at the end | Saved in ade's Claude skills (Claude agents load it automatically) |
 
-For Codex on another machine, clone this Hub and run from its root:
+## General skills worth having
 
-```bash
-mkdir -p "$HOME/.agents/skills"
-for skill in api-design-principles multi-stage-dockerfile systematic-debugging verification-before-completion security-review receiving-code-review stripe-best-practices; do
-  if [ -e "$HOME/.agents/skills/$skill" ]; then
-    echo "Already exists; review before replacing: $skill"
-  else
-    cp -R "shared-skills/backend/$skill" "$HOME/.agents/skills/$skill"
-  fi
-done
-```
-
-Start a fresh backend chat if the skills do not appear in the current session. Keep full directories: copying only `SKILL.md` breaks reference links. Review skill instructions before using them; repo rules and ade's instructions take precedence.
-
-## Which skill to use
+These were found useful by the frontend agent (snapshot reviewed 2026-11-25). Their upstream origins were not verified, so check the source and licence before installing.
 
 | Skill | Backend use |
 |---|---|
-| `api-design-principles` | Review resource naming, HTTP semantics, pagination, error shapes and proposed OpenAPI changes. |
-| `multi-stage-dockerfile` | Review FastAPI container structure and development/production build stages. |
-| `systematic-debugging` | Reproduce failures and find their cause before suggesting a fix. |
-| `verification-before-completion` | Require actual test or command results before claiming work passes. |
-| `security-review` | Review authentication, authorization, uploads, injection and secret handling; Python/FastAPI references are bundled. |
-| `receiving-code-review` | Verify review feedback before advising ade to apply it. |
-| `stripe-best-practices` | Consult when payments work begins; preserve Hub's pending payment decisions. |
+| `api-design-principles` | Review resource naming, HTTP semantics, pagination, error shapes and proposed OpenAPI changes |
+| `security-review` | Review auth, authorization, uploads, injection and secret handling (has Python references) |
+| `stripe-best-practices` | Consult when payments work begins |
+| `systematic-debugging` | Reproduce a failure and find its cause before suggesting a fix |
+| `verification-before-completion` | Require real test or command output before claiming something works |
+| `receiving-code-review` | Check review feedback before applying it |
+| `multi-stage-dockerfile` | Review the FastAPI container's dev and production stages |
 
-No dedicated FastAPI skill is installed in this shared set. API design and Python security references help, but do not replace FastAPI documentation.
+None of these replace the FastAPI documentation.
 
-## Paste into the backend agent
+## Rules that win over any skill
 
-> Read `AGENTS.md`, `context/status.md`, `architecture/backend.md`, the accepted decisions, and `onboarding/backend-skills.md` from Hub_Truckit. Check which recommended skills are already available; install missing snapshots from `shared-skills/backend` into your harness's skills directory. Use them to plan, review, correct and explain. Ade writes the FastAPI application: do not generate or commit backend app code unless ade explicitly asks. Hub's OpenAPI contract is authoritative; API changes need the documented issue and PR workflow. Never commit to Frontend_Truckit. Report tests honestly and open the required Hub changelog/status PR after work.
+- Repo rules (`AGENTS.md`) and ade's instructions take precedence over a skill's instructions.
+- Backend: ade writes the application code. A skill never makes it OK for an agent to write or commit backend app code unless ade asks.
+- Never commit a skill's scripts or templates into Truckit repos unless ade asks.

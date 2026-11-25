@@ -10,6 +10,11 @@ Format:
 - Links: PR, issue
 ```
 
+## 2026-11-25 · Hub_Truckit · Slim down shared skills
+- Removed `shared-skills/` (about 12,000 lines of third-party skill files with unverified origins, including scripts). The hub keeps docs only.
+- `onboarding/backend-skills.md` now lists the useful skills, what each is for, and the rules that override them, and points to `truckit-hub-sync` for Claude agents.
+- Added the Inknut Antiqua heading font to the tokens table in `context/resources.md`.
+
 ## 2026-11-25 · Hub_Truckit · Close out approved frontend foundation
 - Recorded merged frontend foundation and backend skill handoff, passing CI, and completed issue #5. Updated status and repository resources for the next milestone.
 - Links: [Frontend PR #1](https://github.com/Ibikunleogunbanwo/Frontend_Truckit/pull/1), [Hub PR #6](https://github.com/Ibikunleogunbanwo/Hub_Truckit/pull/6), [issue #5](https://github.com/Ibikunleogunbanwo/Hub_Truckit/issues/5).

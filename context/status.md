@@ -13,7 +13,7 @@ Last updated: 2026-11-25 by the frontend agent.
 - API contract outline v0.1.0 (`contract/openapi.yaml`): shared conventions only, endpoints still to be written.
 
 - Frontend foundation merged: [Frontend PR #1](https://github.com/Ibikunleogunbanwo/Frontend_Truckit/pull/1) and [Hub PR #6](https://github.com/Ibikunleogunbanwo/Hub_Truckit/pull/6). CI passed; [issue #5](https://github.com/Ibikunleogunbanwo/Hub_Truckit/issues/5) closed as completed. Includes shared tokens/components, responsive shells, showcase, typed API tooling and tests.
-- Backend skills handoff merged: seven skill snapshots, integrity manifest and [installation guide](../onboarding/backend-skills.md). Backend application code remains owned by ade.
+- Skills: the hub lists useful skills in [`onboarding/backend-skills.md`](../onboarding/backend-skills.md) instead of storing copies. Backend application code remains owned by ade.
 
 ## In progress
 
