@@ -8,6 +8,7 @@ Last updated: 2026-11-25 by the backend agent.
 
 - Hub structure, agent rules, and context docs.
 - Backend architecture and data model (draft, `architecture/backend.md`).
+- Hub CI checks, shared sample data, environments doc, project board guide.
 - Resources page, Figma frame index, and agent onboarding guides.
 - API contract outline v0.1.0 (`contract/openapi.yaml`): shared conventions only, endpoints still to be written.
 

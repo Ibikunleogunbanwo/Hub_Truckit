@@ -1,0 +1,5 @@
+[
+  {"id": "0b9f6a3e-1c2d-4e5f-8a9b-000000000001", "email": "abdurahman@example.com", "phone": "+14165550101", "first_name": "Abdurahman", "last_name": "Opoola", "role": "customer", "email_verified": true, "created_at": "2026-10-01T15:00:00Z"},
+  {"id": "0b9f6a3e-1c2d-4e5f-8a9b-000000000002", "email": "kathryn@example.com", "phone": "+14035550102", "first_name": "Kathryn", "last_name": "Murphy", "gender": "female", "role": "service_center", "email_verified": true, "created_at": "2026-09-12T18:30:00Z"},
+  {"id": "0b9f6a3e-1c2d-4e5f-8a9b-000000000003", "email": "admin@example.com", "phone": "+17805550103", "first_name": "Truckit", "last_name": "Admin", "role": "admin", "email_verified": true, "created_at": "2026-09-01T12:00:00Z"}
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "id": "9c000000-0000-4000-8000-000000000001",
+    "reference": "MOV-7F3K2Q",
+    "customer_id": "0b9f6a3e-1c2d-4e5f-8a9b-000000000001",
+    "status": "quoted",
+    "pickup_address": {"line1": "123 Maple Street", "city": "Toronto", "province": "ON", "postal_code": "M5V 2T6", "country": "CA", "lat": 43.6426, "lng": -79.3871},
+    "dropoff_address": {"line1": "456 Wood Street", "city": "Toronto", "province": "ON", "postal_code": "M4Y 2P8", "country": "CA", "lat": 43.6629, "lng": -79.3807},
+    "move_date": "2026-12-04",
+    "window_start": "2026-12-04T19:00:00Z",
+    "window_end": "2026-12-04T19:15:00Z",
+    "distance_km": 32,
+    "items": [
+      {"category": "Furniture", "item": "Sofa", "quantity": 1, "special_handling": false, "notes": null},
+      {"category": "Fragile & Special Items", "item": "Electronics (Gaming Console)", "quantity": 1, "special_handling": true, "notes": "Keep upright"}
+    ],
+    "building_type_pickup": "apartment",
+    "building_access_pickup": "elevator",
+    "building_type_dropoff": "house",
+    "building_access_dropoff": "ground_floor",
+    "parking_notes": "Loading bay at the back, 30 minute limit",
+    "need_driver": true,
+    "need_load_help": true,
+    "need_unload_help": true,
+    "truck_type": "cargo_van",
+    "movers_needed": 2,
+    "equipment_notes": "Straps, dollies",
+    "contact_name": "Abdurahman Opoola",
+    "contact_phone": "+14165550101",
+    "contact_email": "abdurahman@example.com",
+    "created_at": "2026-11-24T16:00:00Z"
+  }
+]

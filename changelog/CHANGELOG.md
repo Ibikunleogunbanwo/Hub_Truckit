@@ -10,6 +10,11 @@ Format:
 - Links: PR, issue
 ```
 
+## 2026-11-25 · Hub_Truckit · Hub CI, sample data, environments, project board
+- Added `hub-checks` GitHub Actions: Spectral lint of the contract, JSON check of examples, required changelog entry, and a contract version bump check.
+- Added shared sample data in `contract/examples/` (users, service centers with trucks and movers, a move request, a quote, a move, transactions) taken from the Figma.
+- Added `context/environments.md` (dev, staging, prod, secrets rules, `.env.example` contents for both repos) and `context/project-board.md` (GitHub Project setup).
+
 ## 2026-11-25 · Hub_Truckit · Decision: Neon for hosted Postgres
 - Added decision 0004 and updated the backend architecture and resources.
 

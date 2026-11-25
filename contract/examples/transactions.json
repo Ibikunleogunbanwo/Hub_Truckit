@@ -1,0 +1,4 @@
+[
+  {"reference": "TXN-12345-ABCD", "move_reference": "MOV-7F3K2Q", "kind": "charge", "amount": {"amount_cents": 35000, "currency": "CAD"}, "service_type": ["driver", "mover"], "status": "completed", "occurred_at": "2026-11-24T20:02:00Z"},
+  {"reference": "TXN-67890-EFGH", "move_reference": "MOV-2H8P1L", "kind": "charge", "amount": {"amount_cents": 499900, "currency": "CAD"}, "service_type": ["driver"], "status": "failed", "occurred_at": "2026-10-20T22:30:00Z"}
+]
