@@ -1,0 +1,16 @@
+[
+  {
+    "id": "b2000000-0000-4000-8000-000000000001",
+    "reference": "MOV-7F3K2Q",
+    "move_request_id": "9c000000-0000-4000-8000-000000000001",
+    "quote_id": "a1000000-0000-4000-8000-000000000001",
+    "customer_id": "0b9f6a3e-1c2d-4e5f-8a9b-000000000001",
+    "service_center_id": "5c000000-0000-4000-8000-000000000001",
+    "status": "confirmed",
+    "scheduled_at": "2026-12-04T19:00:00Z",
+    "status_events": [
+      {"status": "pending_payment", "created_at": "2026-11-24T20:00:00Z"},
+      {"status": "confirmed", "created_at": "2026-11-24T20:02:00Z"}
+    ]
+  }
+]

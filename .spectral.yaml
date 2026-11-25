@@ -1,0 +1,7 @@
+extends: ["spectral:oas"]
+rules:
+  # Every operation needs an operationId so the frontend can generate a typed client.
+  operation-operationId: error
+  # Tags must be declared at the top of the file.
+  operation-tag-defined: error
+  info-contact: off

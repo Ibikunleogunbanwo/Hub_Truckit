@@ -57,6 +57,19 @@ In the same session where you finish the work, open a PR to this hub that:
 
 The PR template has a checklist for this. Work is not "done" until the hub reflects it.
 
-## 6. Decisions
+## 6. Checks on hub PRs
+
+GitHub Actions (`.github/workflows/hub-checks.yml`) run on every PR to this hub:
+
+- `contract/openapi.yaml` is linted with Spectral (rules in `.spectral.yaml`); errors fail the PR.
+- `contract/examples/*.json` must be valid JSON.
+- `changelog/CHANGELOG.md` must be updated.
+- If `contract/openapi.yaml` changed, `info.version` must change too.
+
+## 7. Secrets
+
+Never commit secrets anywhere. See `context/environments.md`.
+
+## 8. Decisions
 
 Do not re-argue a decision that has an accepted record in `decisions/`. To change one, write a new record that supersedes it and get human approval.

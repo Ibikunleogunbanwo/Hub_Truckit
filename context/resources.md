@@ -25,6 +25,10 @@ Reference only. Do not build on these:
 - **Contract changes:** [issues and PRs labelled `contract-change`](https://github.com/Ibikunleogunbanwo/Hub_Truckit/issues?q=label%3Acontract-change)
 - **Waiting on a human:** [issues labelled `decision-needed`](https://github.com/Ibikunleogunbanwo/Hub_Truckit/issues?q=is%3Aopen+label%3Adecision-needed)
 
+- **Project board:** see [`project-board.md`](project-board.md) for setup and use.
+- **Sample data:** [`contract/examples/`](../contract/examples/) is shared by mocks and seeds.
+- **Environments and secrets:** [`environments.md`](environments.md).
+
 Branch names: `feat/<short-name>`, `fix/<short-name>`, `docs/<short-name>`, `contract/<short-name>`. Every PR in any repo should link its issue (`Closes Hub_Truckit#NN` across repos).
 
 ## Figma
@@ -51,7 +55,7 @@ Design tokens read from Figma:
 | Service | Used for | Status |
 |---|---|---|
 | Stripe | Customer payments, service center payouts | Not set up. Use test mode keys locally. Keys never go in any repo. |
-| PostgreSQL | Main database | Local via Docker Compose |
+| PostgreSQL (Neon) | Main database | Neon for staging and production (decision 0004), Docker Compose locally. Not set up yet. |
 | Redis | Background jobs | Local via Docker Compose |
 | Object storage (S3-compatible) | Licence, ID and truck images | Local via MinIO |
 

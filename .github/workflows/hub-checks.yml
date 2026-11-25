@@ -1,0 +1,61 @@
+name: Hub checks
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  contract:
+    name: Lint API contract and examples
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Lint openapi.yaml with Spectral
+        run: npx --yes @stoplight/spectral-cli@6 lint contract/openapi.yaml --fail-severity=error
+      - name: Check example files are valid JSON
+        run: |
+          for f in contract/examples/*.json; do
+            python3 -m json.tool "$f" > /dev/null || { echo "Invalid JSON: $f"; exit 1; }
+          done
+
+  changelog:
+    name: Changelog updated
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Require an entry in changelog/CHANGELOG.md
+        run: |
+          base="${{ github.event.pull_request.base.sha }}"
+          if git diff --name-only "$base"...HEAD | grep -qx 'changelog/CHANGELOG.md'; then
+            echo "Changelog updated."
+          else
+            echo "::error::Add an entry to changelog/CHANGELOG.md (see AGENTS.md section 5)."
+            exit 1
+          fi
+
+  contract-version:
+    name: Contract version bumped
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: If openapi.yaml changed, info.version must change too
+        run: |
+          base="${{ github.event.pull_request.base.sha }}"
+          if git diff --name-only "$base"...HEAD | grep -qx 'contract/openapi.yaml'; then
+            old=$(git show "$base:contract/openapi.yaml" 2>/dev/null | python3 -c "import sys,yaml;print(yaml.safe_load(sys.stdin)['info']['version'])" || echo none)
+            new=$(python3 -c "import yaml;print(yaml.safe_load(open('contract/openapi.yaml'))['info']['version'])")
+            echo "Contract version: $old -> $new"
+            if [ "$old" = "$new" ]; then
+              echo "::error::contract/openapi.yaml changed but info.version did not. Bump it (AGENTS.md section 4)."
+              exit 1
+            fi
+          else
+            echo "Contract unchanged."
+          fi

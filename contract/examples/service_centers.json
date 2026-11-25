@@ -1,0 +1,21 @@
+[
+  {
+    "id": "5c000000-0000-4000-8000-000000000001",
+    "user_id": "0b9f6a3e-1c2d-4e5f-8a9b-000000000002",
+    "primary_service": "both",
+    "years_experience": 6,
+    "province": "ON",
+    "accepts_out_of_province": true,
+    "verification_status": "verified",
+    "moves_completed": 350,
+    "trucks": [
+      {"id": "7a000000-0000-4000-8000-000000000001", "type": "standard_moving_truck", "make": "Ford", "model": "F-650", "plate_number": "AB 1234 XY", "moves_count": 35, "last_move_at": "2026-11-20T14:00:00Z"},
+      {"id": "7a000000-0000-4000-8000-000000000002", "type": "cargo_van", "make": "Mercedes-Benz", "model": "Sprinter", "plate_number": "BC 5678 ZW", "moves_count": 2, "last_move_at": "2026-11-02T23:13:00Z"},
+      {"id": "7a000000-0000-4000-8000-000000000003", "type": "box_truck", "make": "Isuzu", "model": "NPR", "plate_number": "ON 9101 QR", "moves_count": 59, "last_move_at": "2026-11-18T12:40:00Z"}
+    ],
+    "crew_movers": [
+      {"id": "8b000000-0000-4000-8000-000000000001", "full_name": "Alice Johnson", "moves_count": 82, "last_move_at": "2026-11-07T19:15:00Z"},
+      {"id": "8b000000-0000-4000-8000-000000000002", "full_name": "Michael Smith", "moves_count": 29, "last_move_at": "2026-10-22T22:45:00Z"}
+    ]
+  }
+]
