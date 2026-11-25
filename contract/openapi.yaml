@@ -1,0 +1,123 @@
+# Truckit API contract. The single source of truth between frontend and backend.
+# Rules for changing it are in AGENTS.md, section 4.
+# Endpoints are intentionally not filled in yet: ade adds them module by module
+# while building the backend (see context/screens.md for the list each screen needs).
+openapi: 3.1.0
+info:
+  title: Truckit API
+  version: 0.1.0
+  description: Marketplace API for Truckit moves (customers, service centers, admin).
+servers:
+  - url: http://localhost:8000/api/v1
+    description: Local development
+
+tags:
+  - name: auth
+  - name: users
+  - name: service-centers
+  - name: move-requests
+  - name: quotes
+  - name: moves
+  - name: payments
+  - name: notifications
+  - name: support
+  - name: admin
+
+paths:
+  /health:
+    get:
+      summary: Liveness check
+      operationId: getHealth
+      security: []
+      responses:
+        "200":
+          description: The API is up
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [status]
+                properties:
+                  status:
+                    type: string
+                    example: ok
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    Error:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: object
+          required: [code, message]
+          properties:
+            code:
+              type: string
+              description: Stable, machine-readable code in UPPER_SNAKE_CASE.
+              example: QUOTE_ALREADY_ACCEPTED
+            message:
+              type: string
+              description: Human-readable message, safe to show.
+            details:
+              type: object
+              additionalProperties: true
+
+    Money:
+      type: object
+      description: Amount in the smallest unit (cents).
+      required: [amount_cents, currency]
+      properties:
+        amount_cents:
+          type: integer
+          example: 35000
+        currency:
+          type: string
+          enum: [CAD]
+
+    PageMeta:
+      type: object
+      required: [total, page, page_size]
+      properties:
+        total: { type: integer }
+        page: { type: integer, minimum: 1 }
+        page_size: { type: integer, minimum: 1, maximum: 100 }
+
+    Role:
+      type: string
+      enum: [customer, service_center, admin]
+
+    Province:
+      type: string
+      enum: [AB, BC, MB, NB, NL, NS, NT, NU, ON, PE, QC, SK, YT]
+
+  responses:
+    Unauthorized:
+      description: Missing or invalid token
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Error" }
+    Forbidden:
+      description: Authenticated but not allowed
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Error" }
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Error" }
+    ValidationError:
+      description: Request body or parameters are invalid
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Error" }
+
+security:
+  - bearerAuth: []
