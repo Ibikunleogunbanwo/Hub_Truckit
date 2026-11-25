@@ -10,6 +10,11 @@ Format:
 - Links: PR, issue
 ```
 
+## 2026-11-25 · Hub_Truckit · Slim down shared skills
+- Removed `shared-skills/` (about 12,000 lines of third-party skill files with unverified origins, including scripts). The hub keeps docs only.
+- `onboarding/backend-skills.md` now lists the useful skills, what each is for, and the rules that override them, and points to `truckit-hub-sync` for Claude agents.
+- Added the Inknut Antiqua heading font to the tokens table in `context/resources.md`.
+
 ## 2026-11-25 · Frontend_Truckit / Hub_Truckit · Frontend foundation and backend skills handoff
 - Added the Next.js App Router foundation with Tailwind, local fonts and exact Figma SVG assets, semantic tokens, shadcn-compatible Radix primitives, responsive shells and an interactive component showcase. Documented accessible contrast adjustments.
 - Added an exact revisioned Hub contract snapshot, generated types, openapi-fetch client, loopback Prism mock and CI checks. Only `/health` is defined; no backend app or Hub contract edits.

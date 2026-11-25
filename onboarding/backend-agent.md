@@ -16,7 +16,7 @@ ade writes the backend code to learn FastAPI. The backend agent:
 
 ## Access it needs
 
-Relevant installed skills are shared in [Backend skills and installation](backend-skills.md). Check existing skills before installing duplicates; ade's app-code ownership takes precedence over generic skill instructions.
+Useful skills are listed in [Skills for agents](backend-skills.md). Install them from their source if your agent supports skills; ade's app-code ownership takes precedence over any skill's instructions.
 
 - [ ] `Backend_Truckit` (push: for review comments; app code only on request)
 - [ ] `Hub_Truckit` (push)

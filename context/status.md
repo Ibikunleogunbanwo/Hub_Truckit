@@ -15,7 +15,7 @@ Last updated: 2026-11-25 by the frontend agent.
 ## In progress
 
 - Frontend foundation implemented and in [PR #1](https://github.com/Ibikunleogunbanwo/Frontend_Truckit/pull/1) review ([Hub issue #5](https://github.com/Ibikunleogunbanwo/Hub_Truckit/issues/5)): Next.js, shared Figma-derived tokens/components, responsive shells, showcase, generated API types, Prism and frontend CI. Local lint, typecheck, build, 6 unit/interaction tests and 6 desktop/mobile browser checks passed; axe scans found no violations after the mobile table focus fix. Product screens and live API wiring remain next.
-- Backend skills handoff in the companion Hub PR: seven complete installed skill snapshots, integrity manifest and installation guide. Backend ownership remains with ade.
+- Skills: the hub lists useful skills in `onboarding/backend-skills.md` instead of storing copies. Backend ownership remains with ade.
 
 ## Next
 
