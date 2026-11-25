@@ -1,0 +1,69 @@
+{
+  "snapshot_date": "2026-11-25",
+  "source": "Locally installed .agents/skills snapshots supplied by ade; upstream origin not verified. Original files and bundled license notices preserved.",
+  "skills": {
+    "api-design-principles": {
+      "SKILL.md": "1f6166c23c0a0f32d703c19d84b3c30c2873daefb9e8732339a009934fa17013",
+      "assets/api-design-checklist.md": "ef98cb8910cdc555514198df7becc6de8b04e1a98e2291b1440bc62e14cd07e5",
+      "assets/rest-api-template.py": "b359cda817740ee2cd3c9a901d7d5a14178cc0e2dcb46b75af053e5cc4d6012c",
+      "references/details.md": "e8b19b192ab1e1e99a5d7fed285670c2cfc0f23877338efe68da56eeaeaf1649",
+      "references/graphql-schema-design.md": "0f10cbe2f3d787be9de4ab8dcc88444ac36ab69786973666a229fdbffeb01638",
+      "references/rest-best-practices.md": "675fbafdd5a6d5ac2c17ab97e17c90aa0a10c2a5608860128a8be14764130fae"
+    },
+    "multi-stage-dockerfile": {
+      "SKILL.md": "7dfea7d31f3744930cb07869e15a79f90dbd47d2ddc56d165715fbd257db9ba7"
+    },
+    "systematic-debugging": {
+      "CREATION-LOG.md": "c24733a5b1821bd6bed1fc950261f0b9f4e90097e0bbb96459d8179713730789",
+      "SKILL.md": "808fc5717aa88ad65efff312b11c186294d3e6ee301afb584e2f86599b137787",
+      "condition-based-waiting-example.ts": "40ae5ebe497fdf310200e43fe986552546d0a22837c0d39e855db1cfd33eb88e",
+      "condition-based-waiting.md": "e89fec8400d6cd50f43407cec9fab50976ba4d55d0ec2eb51c0bd68036b54c26",
+      "defense-in-depth.md": "1e175fb86fc357e58c6aebf5441e481e1b7868b4380c0456b63a17eefbd18ba7",
+      "find-polluter.sh": "dd7b8f13c4cc2a24b33ff87b18da9248f3e1c80a085c3316224f69ff0fa5c43c",
+      "root-cause-tracing.md": "6b0622269e098ca1399e123e553fd385f0b6412d88ef0e9c4f5a8ea9cf1cec7b",
+      "test-academic.md": "fe2ba480d78ac0d686dc025f41c2a32a43d642bf533f91b0c6053a04d35d6486",
+      "test-pressure-1.md": "0b6a915db0054577819834c79be9eb614e97bddba10d73768e1fbe91cfed048a",
+      "test-pressure-2.md": "b2030aeffba07050e8ad573ddf87486457c4a016a786bb326235bebd856f2016",
+      "test-pressure-3.md": "96b50a52e2c7989c9cf20fb752c47c1e9a3a70dc362f8f7989f8f5b64dac7708"
+    },
+    "verification-before-completion": {
+      "SKILL.md": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3"
+    },
+    "security-review": {
+      "LICENSE": "0fc858d87f467971ee612fc183896257a1c160a1610a443896b33ae4d2a44ef7",
+      "SKILL.md": "6d36fa39ada88c8e66fdd4c52c3b846b0f27602d49871856d4bff90cc94719e5",
+      "infrastructure/docker.md": "84bd49469c5a0cbd42fecdcce752de98cf6821b601dfef6a1920df61f030ae62",
+      "languages/javascript.md": "f4226c82de13da9dec9be7b509932d74a4ade2c8d46b98a078a5b38bf8aa3319",
+      "languages/python.md": "32d0b1304d132fc582320d584d54bbaea566d51700cd16b3f0be723ed834a556",
+      "references/api-security.md": "65b2456b4c5ae0d6d9849eac8196ac03fbefbf88657c5e069a8aa5063dd6afbf",
+      "references/authentication.md": "7bc598cd4af33bb62406f5a0e8ff7adebff83c04e5fb449e6738f96ae0e26be6",
+      "references/authorization.md": "5ccfd579a1eca4d9d374eb00b04ba33cc9a2918e14e5cb7620c136a6feaeffff",
+      "references/business-logic.md": "fc8ec30eb19f73759e8901e58d7ca66fc87035703325cc8a844298102fa6298a",
+      "references/cryptography.md": "1e1301624e0c9b1699e1d95af11df06a67d104ff06443e93711bb656152f364c",
+      "references/csrf.md": "7b57ba0a45a291eee24578af8b0c69515c76e452c33d8c2d717c66ee3bbdda20",
+      "references/data-protection.md": "920b7dfb86dc696002d31022c1f7665ef602dd1ed76f1124ad937d488ce2b381",
+      "references/deserialization.md": "be9946daf389ad594fbc4065246ff334c389da1e2cf593180ca150b0204287fb",
+      "references/error-handling.md": "e12d3c9f713614223ce797935f3a4c2ac1a7f1fcf0ea24e865a1a70efeab4fb9",
+      "references/file-security.md": "a0a001fb79fe9f1169fa3ba523225164744c42d8779341f15d3d0fc349185f2a",
+      "references/injection.md": "d3989e97af773f521170b430a0e629b26c6ff2051cd826fa62a895523f268178",
+      "references/logging.md": "acca4eeebfc451bb62a7c085d1121ffa443e8cd0831548c2ae6f7fc606056cbc",
+      "references/misconfiguration.md": "919c44e309eaa6427a8bb44a2ed645fbf2b46d9dfe86a0fcdb2d084201898390",
+      "references/modern-threats.md": "d2ac69d91ade6df9c4bf89b2be0d203651d1a0cc5a67d03db8013af52c8ffe6b",
+      "references/ssrf.md": "646a8244fa61997b9b4f093169be1af4f94e6a3d04dcae8d426bb821870b2bff",
+      "references/supply-chain.md": "ef3000d91763ccdddfbce2660943c4090b4c16b3b33afe980f4e10947729e1f1",
+      "references/xss.md": "4735df1e581b757b078605fbc27d37e85cfe182c45ab326c9e536c71a930680c"
+    },
+    "receiving-code-review": {
+      "SKILL.md": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438"
+    },
+    "stripe-best-practices": {
+      "SKILL.md": "dc48bb9ffddeac451425c1b77819cf67795f049f3ec880758c29c9f1a970ea48",
+      "references/billing.md": "d9f0fd66354fd13e9a32c538b61e77d687f9bab2230def404c8f4eec5089c48f",
+      "references/connect.md": "5da76cb728ab738f52b0838d5e5d4143a3aa91d73d842f69153e2a1f0ca9471f",
+      "references/payments.md": "da5ba3569a74231c17933f93a3928c5d7035498e1c2bc4b8674c0444bd13d7ec",
+      "references/security.md": "9926ba31e8624936cccb36ec0f3d4f75fe57e059138ac6974b829a4fdf1ffd4c",
+      "references/tax.md": "2baf68f85d46c66046c0c5a39811bc250fb2429da3511766dfc0f1e2ecc57a00",
+      "references/treasury.md": "ccd38ef29a654b2c59bde4d56e5537af6a89f10a7297ed0b87c3b9e9f2bb8ffa"
+    }
+  }
+}

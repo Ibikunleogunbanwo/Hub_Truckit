@@ -8,7 +8,7 @@ Everything an agent or collaborator needs to reach. Keep it current.
 |---|---|---|---|
 | [Hub_Truckit](https://github.com/Ibikunleogunbanwo/Hub_Truckit) | Shared context, API contract, decisions, changelog, change requests | Shared | Live |
 | [Backend_Truckit](https://github.com/Ibikunleogunbanwo/Backend_Truckit) | FastAPI backend | ade writes it; the backend agent reviews and guides | Empty (README only) |
-| [Frontend_Truckit](https://github.com/Ibikunleogunbanwo/Frontend_Truckit) | Next.js web app (customer, service center, admin) | Frontend agent | Not created yet |
+| [Frontend_Truckit](https://github.com/Ibikunleogunbanwo/Frontend_Truckit) | Next.js web app (customer, service center, admin) | Frontend agent | Foundation in review; product screens next |
 
 Reference only. Do not build on these:
 

@@ -59,6 +59,7 @@ EMAIL_FROM=no-reply@truckit.example
 NEXT_PUBLIC_API_BASE_URL=http://localhost:8000/api/v1
 NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_xxx
 NEXT_PUBLIC_USE_MOCKS=true       # true = use the Prism mock server built from the contract
+NEXT_PUBLIC_MOCK_API_BASE_URL=http://localhost:4010  # Prism, loopback only
 ```
 
 Only `NEXT_PUBLIC_` variables reach the browser. Never put a secret key in one.
