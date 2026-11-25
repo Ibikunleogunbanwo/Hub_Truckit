@@ -11,7 +11,7 @@ This document is the target design. It is a guide for writing the code, not gene
 | Language | Python 3.12 |
 | Framework | FastAPI |
 | Validation and schemas | Pydantic v2 |
-| Database | PostgreSQL 16 |
+| Database | PostgreSQL (Neon in staging and production, Docker locally; see decision 0004) |
 | ORM and migrations | SQLAlchemy 2.0 (async) and Alembic |
 | Auth | JWT access token (15 min) and refresh token (14 days, rotated, stored hashed); passwords hashed with argon2 |
 | Payments | Stripe (PaymentIntents for customers; Stripe Connect for service center payouts, see open questions) |

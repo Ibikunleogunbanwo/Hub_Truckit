@@ -51,7 +51,7 @@ Design tokens read from Figma:
 | Service | Used for | Status |
 |---|---|---|
 | Stripe | Customer payments, service center payouts | Not set up. Use test mode keys locally. Keys never go in any repo. |
-| PostgreSQL | Main database | Local via Docker Compose |
+| PostgreSQL (Neon) | Main database | Neon for staging and production (decision 0004), Docker Compose locally. Not set up yet. |
 | Redis | Background jobs | Local via Docker Compose |
 | Object storage (S3-compatible) | Licence, ID and truck images | Local via MinIO |
 

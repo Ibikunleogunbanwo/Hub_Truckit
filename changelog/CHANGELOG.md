@@ -10,6 +10,9 @@ Format:
 - Links: PR, issue
 ```
 
+## 2026-11-25 · Hub_Truckit · Decision: Neon for hosted Postgres
+- Added decision 0004 and updated the backend architecture and resources.
+
 ## 2026-11-25 · Hub_Truckit · Resources and agent onboarding
 - Added `context/resources.md` (repos, GitHub collaboration links, Figma links and access rules, design tokens, services), `context/figma-frames.md` (every frame with its node ID and link), and `onboarding/` with a starter prompt and access checklist for the frontend and backend agents.
 
