@@ -8,7 +8,7 @@ This document is the target design. It is a guide for writing the code, not gene
 
 | Concern | Choice |
 |---|---|
-| Language | Python 3.12 |
+| Language | Python 3.14 |
 | Framework | FastAPI |
 | Validation and schemas | Pydantic v2 |
 | Database | PostgreSQL (Neon in staging and production, Docker locally; see decision 0004) |
@@ -18,6 +18,7 @@ This document is the target design. It is a guide for writing the code, not gene
 | Background jobs | ARQ on Redis (emails, notifications, Stripe webhook follow-ups) |
 | File storage | S3-compatible object storage (licence, ID, truck images); presigned upload URLs |
 | Email | Provider behind an interface (e.g. Resend or SES), console backend in dev |
+| Dependencies | pip with pinned `requirements.txt` (runtime) and `requirements-dev.txt` (tests and lint) |
 | Tests | pytest, httpx AsyncClient, a Postgres test database |
 | Lint and types | ruff, mypy |
 | Local dev | Docker Compose: api, postgres, redis, minio, stripe-cli |

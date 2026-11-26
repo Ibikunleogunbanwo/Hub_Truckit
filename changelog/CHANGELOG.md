@@ -10,6 +10,12 @@ Format:
 - Links: PR, issue
 ```
 
+## 2026-11-25 · Backend_Truckit · Project setup
+- FastAPI app (`main.py`) with `GET /api/v1/health` returning `{"status": "ok"}` through an `/api/v1` APIRouter, matching the contract.
+- Pinned `requirements.txt` (fastapi, pydantic-settings, uvicorn[standard], pwdlib[argon2], PyJWT) and `requirements-dev.txt` (pytest, httpx, ruff). `.gitignore` excludes `.env`, `env/`, `.venv/`.
+- Python version set to 3.14 in `architecture/backend.md`. MongoDB was proposed and dropped in review, in line with decision 0004 (Postgres).
+- Links: [Backend PR #1](https://github.com/Ibikunleogunbanwo/Backend_Truckit/pull/1)
+
 ## 2026-11-25 · Hub_Truckit · Slim down shared skills
 - Removed `shared-skills/` (about 12,000 lines of third-party skill files with unverified origins, including scripts). The hub keeps docs only.
 - `onboarding/backend-skills.md` now lists the useful skills, what each is for, and the rules that override them, and points to `truckit-hub-sync` for Claude agents.
